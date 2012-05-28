@@ -1,24 +1,26 @@
 #!/usr/bin/env python
-
+import sys
 from random import choice
 import numpy as np
+from routes import values
 
-cities = ["A", "B", "C", "D"]
+#cities = ["A", "B", "C", "D"]
 dt = np.dtype([('city_start', 'S10'), ('city_end', 'S10'), ('distance', int)])
-values = [
-    ("A","B",1),
-    ("A","C",3),
-    ("A","D",5),
-    ("B","A",1),
-    ("B","C",7),
-    ("B","D",9),
-    ("C","A",13),
-    ("C","B",15),
-    ("C","D",4),
-    ("D","A",6),
-    ("D","B",8),
-    ("D","C",4),
-]
+#values = [
+#    ("A","B",1),
+#    ("A","C",3),
+#    ("A","D",5),
+#    ("B","A",1),
+#    ("B","C",7),
+#    ("B","D",9),
+#    ("C","A",13),
+#    ("C","B",15),
+#    ("C","D",4),
+#    ("D","A",6),
+#    ("D","B",8),
+#    ("D","C",4),
+#]
+
 data_set = np.array(values,dtype=dt)
 
 def all_cities(mdarray):
@@ -37,7 +39,7 @@ def all_cities(mdarray):
 def randomize_city_start(all_cities):
     """Returns a randomized city to start trip"""
     
-    return choice(cities)
+    return choice(all_cities)
 
 def get_shortest_route(routes):
     """Sort the list by distance and return shortest distance route"""
@@ -51,35 +53,36 @@ def greedy_path():
     itinerary = []
     cities = all_cities(data_set)
     starting_city = randomize_city_start(cities.keys())
+    print "starting_city: %s" % starting_city
     cities_visited = {}
     #we want to iterate through all cities once
     count = 1
     while True:
         possible_routes = []
         distance = [] 
-        print "starting city: %s" % starting_city
+        #print "starting city: %s" % starting_city
         for path in data_set:
             if starting_city in path['city_start']:
                 #we can't go to cities we have already visited
                 if path['city_end'] in cities_visited:
                     continue
                 else:
-                    print "path: ", path
+                    #print "path: ", path
                     possible_routes.append(path)
         
         if not possible_routes:
             break
         #append this to itinerary
         route = get_shortest_route(possible_routes)
-        print "Route(%s): %s " % (count, route)
+        #print "Route(%s): %s " % (count, route)
         count += 1
         itinerary.append(route)
         #add this city to the visited city list
         cities_visited[route[0]] = count
-        print "cities_visited: %s " % cities_visited
+        #print "cities_visited: %s " % cities_visited
         #reset the starting_city to the next city
         starting_city = route[1]
-        print "itinerary: %s" % itinerary
+        #print "itinerary: %s" % itinerary
     
     return itinerary
 
@@ -88,12 +91,32 @@ def get_total_distance(complete_itinerary):
     distance = sum(z for x,y,z in complete_itinerary)
     return distance
 
+def lowest_simulation(num):
+    
+    routes = {}
+    for i in range(num):
+        itinerary = greedy_path()
+        distance = get_total_distance(itinerary)
+        routes[distance] = itinerary
+    shortest_distance = min(routes.keys())
+    route = routes[shortest_distance]
+    return shortest_distance, route
+
 def main():
     """runs everything"""
     
-    print "All Routes: %s" % data_set
-    itinerary = greedy_path()
-    print "Distance: %s" % get_total_distance(itinerary)
+    if len(sys.argv) == 2:
+        iterations = int(sys.argv[1])
+        print "Running simulation %s times" % iterations
+        distance, route = lowest_simulation(iterations)
+        print "Shortest Distance: %s" % distance
+        print "Optimal Route: %s" % route
+    else:
+        #print "All Routes: %s" % data_set
+        itinerary = greedy_path()
+        print "itinerary: %s" % itinerary
+        print "Distance: %s" % get_total_distance(itinerary)
+    
 
 if __name__ == '__main__':
    main()
