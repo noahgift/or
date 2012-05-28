@@ -4,8 +4,8 @@ from random import choice
 import numpy as np
 from routes import values
 
-#cities = ["A", "B", "C", "D"]
 dt = np.dtype([('city_start', 'S10'), ('city_end', 'S10'), ('distance', int)])
+
 #values = [
 #    ("A","B",1),
 #    ("A","C",3),
