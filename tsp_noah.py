@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+"""
+Traveling salesman solution with random start and greedy path selection
+
+"""
 
 from random import choice
 import numpy as np
