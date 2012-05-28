@@ -85,7 +85,7 @@ def greedy_path():
 
 def get_total_distance(complete_itinerary):
     
-    distance = sum(z for z,y,z in complete_itinerary)
+    distance = sum(z for x,y,z in complete_itinerary)
     return distance
 
 def main():
