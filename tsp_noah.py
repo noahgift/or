@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 import sys
+"""
+Traveling salesman solution with random start and greedy path selection
+
+"""
+
 from random import choice
 import numpy as np
 from routes import values
