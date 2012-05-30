@@ -2,6 +2,10 @@
 import sys
 """
 Traveling salesman solution with random start and greedy path selection
+You can select how many iterations to run by doing the following:
+
+python tsp_greedy_random_start.py 20 #runs 20 times
+
 
 """
 
@@ -10,22 +14,6 @@ import numpy as np
 from routes import values
 
 dt = np.dtype([('city_start', 'S10'), ('city_end', 'S10'), ('distance', int)])
-
-#values = [
-#    ("A","B",1),
-#    ("A","C",3),
-#    ("A","D",5),
-#    ("B","A",1),
-#    ("B","C",7),
-#    ("B","D",9),
-#    ("C","A",13),
-#    ("C","B",15),
-#    ("C","D",4),
-#    ("D","A",6),
-#    ("D","B",8),
-#    ("D","C",4),
-#]
-
 data_set = np.array(values,dtype=dt)
 
 def all_cities(mdarray):
@@ -58,7 +46,7 @@ def greedy_path():
     itinerary = []
     cities = all_cities(data_set)
     starting_city = randomize_city_start(cities.keys())
-    print "starting_city: %s" % starting_city
+    #print "starting_city: %s" % starting_city
     cities_visited = {}
     #we want to iterate through all cities once
     count = 1
