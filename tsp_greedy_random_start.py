@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import sys
 """
 Traveling salesman solution with random start and greedy path selection
 You can select how many iterations to run by doing the following:
@@ -9,6 +8,7 @@ python tsp_greedy_random_start.py 20 #runs 20 times
 
 """
 
+import sys
 from random import choice
 import numpy as np
 from routes import values

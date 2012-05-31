@@ -66,6 +66,13 @@ values = [
 ("GOOG", "GPS",48),
 ("GOOG", "HPQ",6),
 ("GOOG", "INTC",15),
+("GOOG", "MCK",49),
+("GOOG", "ORCL",16),
+("GOOG", "PCG",48),
+("GOOG", "SFO",36),
+("GOOG", "SWY",32),
+("GOOG", "URS",49),
+("GOOG", "WFC",49),
 
 ("GPS","AAPL" ,59),
 ("GPS", "CSCO",67),
