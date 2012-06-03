@@ -1,3 +1,16 @@
+"""
+This is a coin flip game with the following rules:
+
+Whenever heads or tails becomes 3 flips ahead of the other side,
+the winner is paid out 8 dollars.  For each flip though, a dollar
+will be substracted.
+
+You can run the simulation N times by doing the following:
+
+python coin_flip.py 10
+
+"""
+
 import random
 import sys
 import math
