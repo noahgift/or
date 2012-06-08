@@ -14,8 +14,6 @@ from coopr.pyomo import (ConcreteModel, Objective, Var, NonNegativeReals,
 
 
 
-
-
 if __name__ == '__main__':
     #This replicates what the pyomo command-line tools does
     from coopr.opt import SolverFactory
