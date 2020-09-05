@@ -9,4 +9,5 @@ http://faculty.gsm.ucdavis.edu/~dlw/
 
 ### Examples of greedy algorithms and random choices
 
-[Colab Notebook on Greedy Algorithms and random choices](https://github.com/noahgift/or/blob/master/Explore_Greedy_Solutions.ipynb)
+* [Colab Notebook on Greedy Algorithms and random choices](https://github.com/noahgift/or/blob/master/Explore_Greedy_Solutions.ipynb)
+* [GCP Flask application serving our "greedy coin choices"](https://github.com/noahgift/or/blob/master/main.py)
