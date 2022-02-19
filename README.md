@@ -9,6 +9,15 @@ Operations Research Algorithms
 The genesis of this code is from an Operations Research course at the UC Davis MBA program with Dr.David L Woodruff:  
 http://faculty.gsm.ucdavis.edu/~dlw/
 
+### To run container
+`docker build -t fastapi:latest .`
+`docker run -p 127.0.0.1:8080:8080 fastapi:latest`
+
+A.  Then push to ECR
+B.  Deploy via AWS App Runner
+
+
+
 
 ### Randomized Start with Greedy Path Solution for TSP
 
