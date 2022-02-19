@@ -14,6 +14,7 @@ http://faculty.gsm.ucdavis.edu/~dlw/
 `docker run -p 127.0.0.1:8080:8080 fastapi:latest`
 
 A.  Then push to ECR
+
 B.  Deploy via AWS App Runner
 
 
