@@ -1,5 +1,6 @@
-or
-##
+[![Python application test with Github Actions](https://github.com/noahgift/or/actions/workflows/main.yml/badge.svg)](https://github.com/noahgift/or/actions/workflows/main.yml)
+
+## Operations Research
 
 https://github.com/DEAP/deap
 
