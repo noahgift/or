@@ -8,6 +8,6 @@ test:
 format:
 	black greedy-random-tsp.py
 lint:
-	pylint --disable=R,C greedy-random-tsp.py
+	pylint --disable=R,C greedy-random-tsp.py app.py
 
 all: install lint test
