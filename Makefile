@@ -10,6 +10,6 @@ format:
 
 
 lint:
-	pylint --disable=R,C tsp_greedy_random_start.py
+	pylint --disable=R,C greedy-random-tsp.py
 
 all: install lint test

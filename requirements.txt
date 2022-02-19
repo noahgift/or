@@ -1,3 +1,3 @@
-pylint
-numpy
-black
+pylint==2.12.2
+numpy==1.22.2
+black==22.1.0

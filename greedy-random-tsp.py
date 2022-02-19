@@ -16,7 +16,6 @@ from routes import values
 dt = np.dtype([("city_start", "S10"), ("city_end", "S10"), ("distance", int)])
 data_set = np.array(values, dtype=dt)
 
-
 def all_cities():
     """Finds unique cities
 
