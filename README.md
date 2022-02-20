@@ -42,4 +42,5 @@ Optimal Route: [(b'URS', b'WFC', 0), (b'WFC', b'GPS', 1), (b'GPS', b'PCG', 1), (
 ### YouTube Series on Business Analytics
 
 * [YouTube Business Analytics Lectures](https://www.youtube.com/watch?v=WnER8NU_UZs&list=PLdfopzFjkPz-2nmMKWaEvgEJjbfrtAOzb)
-* [YouTube Containerize Algorithms to AWS](https://www.youtube.com/watch?v=SWAqetwqPiU)
+* [YouTube Containerize Algorithms to AWS](https://www.youtube.com/watch?v=SWAqetwqPiU) and on O'Reilly-Watch on O'Reilly Media: https://learning.oreilly.com/videos/learn-to-containerize/02202022VIDEOPAIML/
+
